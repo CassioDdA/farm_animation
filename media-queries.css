@@ -1,0 +1,129 @@
+/* Para telas menores que 768px */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%; /* ou outro valor adequado */
+    height: auto; /* ou outro valor adequado */
+    top: unset;
+    left: unset;
+    transform: unset;
+    margin: auto;
+    position: relative;
+  }
+}
+
+/* Para telas maiores que 1200px */
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 50em; /* ou outro valor adequado */
+    height: 20em; /* ou outro valor adequado */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: 767px){
+	.container {
+		background-color: #113755;
+		height: 21.87em;
+		width: 21.87em;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		left: 50%;
+		top: 50%;
+		border-radius: 50%;
+		overflow: hidden;
+		}
+
+		.windmill {
+			height: 0;
+			width: 1.25em;
+			border-bottom: 2.37em solid #041524;
+			border-left: 0.15em solid transparent;
+			border-right: 0.15em solid transparent;
+			position: absolute;
+			left: 16.5em;
+			bottom: 4.87em;
+		}
+	
+		.windmill:after {
+			position: absolute;
+			content: "";
+			background-color: #041524;
+			height: 0.62em;
+			width: 1.25em;
+			bottom: -0.06em;
+			border-radius: 1.25em 1.25em 0 0;
+		}
+	
+		.windmill:before {
+			content: "";
+			position: absolute;
+			width: 1.5em;
+			height: 0;
+			border-bottom: 0.37em solid #0b2231;
+			border-left: 0.06em solid transparent;
+			border-right: 0.06em solid transparent;
+			position: absolute;
+			right: -0.2em;
+			top: 0.06em;
+		}
+	
+		.light {
+			height: 0.25em;
+			width: 0.25em;
+			background-color: #8daf76;
+			position: absolute;
+			top: 0.75em;
+			left: 0.5em;
+			border-radius: 50%;
+			box-shadow: 0 0 0.06em 0.12em rgba(141, 175, 118, 0.3),
+				0 0 0.06em 0.25em rgba(141, 175, 118, 0.2);
+		}
+	
+		.light:before {
+			content: "";
+			position: absolute;
+			background-color: #0f304f;
+			height: 0.5em;
+			width: 0.5em;
+			bottom: -1.25em;
+			left: -0.12em;
+			border-radius: 0.25em 0.25em 0 0;
+		}
+	
+		.blades {
+			height: 3.75em;
+			width: 3.75em;
+			position: absolute;
+			bottom: -1.9em;
+			left: -1.25em;
+			animation: spin 5s infinite linear;
+		}
+	
+		@keyframes spin {
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	
+		.blades:before {
+			position: absolute;
+			content: "";
+			height: 100%;
+			width: 0.5em;
+			background-color: #041524;
+			left: 1.62em;
+		}
+	
+		.blades:after {
+			position: absolute;
+			content: "";
+			height: 100%;
+			width: 0.5em;
+			background-color: #041524;
+			left: 1.62em;
+			transform: rotate(90deg);
+		}
+}
